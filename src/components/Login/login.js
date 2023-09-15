@@ -7,7 +7,7 @@ function Login() {
     <main className="relative flex justify-center items-center h-screen">
   <section className="">
     <div className=" flex">
-      <div className="grid  w-full grid-cols-1 md:grid-cols-2">
+      <div className="md:flex  grid w-full grid-cols-1 md:grid-cols-2 ">
         
           <div className="col-span-1 w-full md:col-span-2 md:col-start-2 flex flex-col mx-auto">
             <div className="bg-white  rounded-lg p-4">
@@ -46,7 +46,7 @@ function Login() {
 
               <div className="mt-4 text-center">
                 <p className="text-sm">
-                  Don t have an account?
+                  Don t have an account? 
                   <a href="javascript:;" className="text-primary font-semibold">Request Account</a>
                 </p>
               </div>
@@ -56,11 +56,11 @@ function Login() {
          
         
       </div>
-      <div className="grid w-full grid-cols-1 md:grid-cols-2 ">
-      <div className="hidden w-full md:flex  md:h-full md:pe-0 md:top-0 md:end-0 text-center justify-center flex-col">
+      <div className="hidden md:flex  grid w-full grid-cols-1 md:grid-cols-2 ">
+      <div className=" text-center justify-center flex-col">
             <div className="bg-gradient-to-br from-primary to-primary-light h-full m-3 p-7 rounded-lg flex flex-col justify-center overflow-hidden">
-              <h4 className="text-white font-semibold">Attention is the new currency</h4>
-              <p className="text-white">The more effortless the writing looks, the more effort the writer actually put into the process.</p>
+              <h4 className="text-white font-semibold">Welcome to Discipline CONNECT (DC)</h4> <br></br>
+              <p className="text-white">This system will foster a more disciplined <br></br>and harmonious learning environment, promoting the overall development and academic success of students.</p>
             </div>
           </div>
         </div>
