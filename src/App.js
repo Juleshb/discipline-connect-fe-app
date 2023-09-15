@@ -1,11 +1,19 @@
-import React from 'react';
-import './styles/tailwind.css'; 
-function App() {
+
+import { Navigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Login from './components/Login/login';
+import Sidebar from './components/Sidebar/Sidebar';
+
+export default function App() {
   return (
-    <div className="bg-blue-500 text-white p-4">
-      Hello, DC!
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/adimin" element={<Sidebar />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
-
-export default App;
