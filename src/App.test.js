@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import Login from './components/Login/login';
 
-test('renders hello text', () => {
-  render(<App />);
-  const textElement = screen.getByText(/Hello, DC!/i);
+test('renders Sigin text', () => {
+  render(<Login/>);
+  const textElement = screen.getByText(/Sign in with/i);
   expect(textElement).toBeInTheDocument();
 });
