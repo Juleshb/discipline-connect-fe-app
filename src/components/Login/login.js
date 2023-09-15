@@ -46,7 +46,7 @@ function Login() {
 
               <div className="mt-4 text-center">
                 <p className="text-sm">
-                  Don t have an account?
+                  Don t have an account? 
                   <a href="javascript:;" className="text-primary font-semibold">Request Account</a>
                 </p>
               </div>
@@ -59,8 +59,8 @@ function Login() {
       <div className="hidden md:flex  grid w-full grid-cols-1 md:grid-cols-2 ">
       <div className=" text-center justify-center flex-col">
             <div className="bg-gradient-to-br from-primary to-primary-light h-full m-3 p-7 rounded-lg flex flex-col justify-center overflow-hidden">
-              <h4 className="text-white font-semibold">Attention is the new currency</h4>
-              <p className="text-white">The more effortless the writing looks, the more effort the writer actually put into the process.</p>
+              <h4 className="text-white font-semibold">Welcome to Discipline CONNECT (DC)</h4> <br></br>
+              <p className="text-white">This system will foster a more disciplined <br></br>and harmonious learning environment, promoting the overall development and academic success of students.</p>
             </div>
           </div>
         </div>
