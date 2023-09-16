@@ -1,6 +1,7 @@
 import logo from '../../../src/assets/logo.png'
 import React from "react";
 import { Link } from "react-router-dom";
+import { Icon } from '@iconify/react';
 
 
 
@@ -16,7 +17,7 @@ export default function Sidebar() {
             type="button"
             onClick={() => setCollapseShow("bg-white m-2 py-3 px-6")}
           >
-            <i className="fas fa-bars">...</i>
+            <i className="fas fa-bars"><Icon icon="ri:menu-2-fill" /></i>
           </button>
           {/* Brand */}
           <div className="relative">
@@ -57,7 +58,7 @@ export default function Sidebar() {
                     className="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
                     onClick={() => setCollapseShow("hidden")}
                   >
-                    x
+                   <Icon icon="ic:outline-close" />
                   </button>
                 </div>
               </div>
@@ -68,7 +69,7 @@ export default function Sidebar() {
               <li className="items-center hover:bg-sky-100 px-4 rounded-lg ">
                 <Link
                   className={
-                    "text-xs   py-3 block " +
+                    "text-xs   py-3 block flex " +
                     (window.location.href.indexOf("/admin/dashboard") !== -1
                       ? "text-lightBlue-500 hover:text-lightBlue-600"
                       : " hover:text-blueGray-500")
@@ -82,7 +83,7 @@ export default function Sidebar() {
                         ? "opacity-75"
                         : "text-blueGray-300")
                     }
-                  ></i>{""}
+                  ><Icon icon="ic:outline-dashboard" /></i>{""}
                  
                   Dashboard
                 </Link>
@@ -91,7 +92,7 @@ export default function Sidebar() {
               <li className="items-center hover:bg-sky-100 px-4 rounded-lg ">
                 <Link
                   className={
-                    "text-xs   py-3 block " +
+                    "text-xs flex  py-3 block " +
                     (window.location.href.indexOf("/admin/settings") !== -1
                       ? "text-lightBlue-500 hover:text-lightBlue-600"
                       : "hover:text-blueGray-500")
@@ -105,7 +106,8 @@ export default function Sidebar() {
                         ? "opacity-75"
                         : "text-blueGray-300")
                     }
-                  ></i>{" "}
+                  ><Icon icon="ph:student-light" /></i>{" "}
+                  
                   Students
                 </Link>
               </li>
@@ -113,7 +115,7 @@ export default function Sidebar() {
               <li className="items-center hover:bg-sky-100 px-4 rounded-lg">
                 <Link
                   className={
-                    "text-xs   py-3  block " +
+                    "text-xs  flex py-3  block " +
                     (window.location.href.indexOf("/admin/tables") !== -1
                       ? "text-lightBlue-500 hover:text-lightBlue-600"
                       : " hover:text-blueGray-500")
@@ -127,7 +129,8 @@ export default function Sidebar() {
                         ? "opacity-75"
                         : "text-blueGray-300")
                     }
-                  ></i>{" "}
+                  ><Icon icon="fa-solid:users" /></i>{" "}
+                  
                   Guardians
                 </Link>
               </li>
@@ -135,7 +138,7 @@ export default function Sidebar() {
               <li className="items-center hover:bg-sky-100 px-4 rounded-lg">
                 <Link
                   className={
-                    "text-xs   py-3  block " +
+                    "text-xs flex py-3  block " +
                     (window.location.href.indexOf("/admin/maps") !== -1
                       ? "text-lightBlue-500 hover:text-lightBlue-600"
                       : " hover:text-blueGray-500")
@@ -149,56 +152,62 @@ export default function Sidebar() {
                         ? "opacity-75"
                         : "text-blueGray-300")
                     }
-                  ></i>{" "}
+                  ><Icon icon="charm:graduate-cap" /></i>{" "}
+                  
                   levels/classes
                 </Link>
               </li>
 
               <li className="items-center hover:bg-sky-100 px-4 rounded-lg">
                 <Link
-                  className=" hover:text-blueGray-500 text-xs   py-3 block"
+                  className=" hover:text-blueGray-500 text-xs flex  py-3 block"
                   to="/auth/login"
                 >
-                  <i className="fas fa-fingerprint text-blueGray-400 mr-2 text-sm"></i>{" "}
+                  <i className="fas fa-fingerprint text-blueGray-400 mr-2 text-sm"><Icon icon="vaadin:records" /></i>{" "}
+                  
                   Major offense
                 </Link>
               </li>
 
               <li className="items-center hover:bg-sky-100 px-4 rounded-lg">
                 <Link
-                  className=" hover:text-blueGray-500 text-xs   py-3  block"
+                  className=" hover:text-blueGray-500 text-xs flex  py-3  block"
                   to="/auth/register"
                 >
-                  <i className="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"></i>{" "}
+                  <i className="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"><Icon icon="vaadin:records" /></i>{" "}
+                  
                   Minor offense
                 </Link>
               </li>
             
               <li className="items-center hover:bg-sky-100 px-4 rounded-lg">
                 <Link
-                  className="hover:text-blueGray-500 text-xs   py-3  block"
+                  className="hover:text-blueGray-500 text-xs flex  py-3  block"
                   to="/landing"
                 >
-                  <i className="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>{" "}
+                  <i className="fas fa-newspaper text-blueGray-400 mr-2 text-sm"><Icon icon="octicon:key-24" /></i>{" "}
+                  
                   Permissions
                 </Link>
               </li>
 
               <li className="items-center hover:bg-sky-100 px-4 rounded-lg ">
                 <Link
-                  className=" hover:text-blueGray-500 text-xs   py-3 block"
+                  className=" hover:text-blueGray-500 text-xs flex  py-3 block"
                   to="/profile"
                 >
-                  <i className="fas fa-user-circle text-blueGray-400 mr-2 text-sm"></i>{" "}
+                  <i className="fas fa-user-circle text-blueGray-400 mr-2 text-sm"> <Icon icon="mdi:bell-notification-outline" /></i>{" "}
+                 
                   Notifications
                 </Link>
               </li>
               <li className="items-center hover:bg-sky-100 px-4 rounded-lg ">
                 <Link
-                  className=" hover:text-blueGray-500 text-xs   py-3 block"
+                  className=" hover:text-blueGray-500 text-xs  flex py-3 block"
                   to="/profile"
                 >
-                  <i className="fas fa-user-circle text-blueGray-400 mr-2 text-sm"></i>{" "}
+                  <i className="fas fa-user-circle text-blueGray-400 mr-2 text-sm"><Icon icon="ic:outline-calendar-today" /></i>{" "}
+                  
                   Calendar
                 </Link>
               </li>
