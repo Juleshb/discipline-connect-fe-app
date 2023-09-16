@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b0af75bb-d79b-458c-96f4-8ed59f2ba1c1/deploy-status)](https://app.netlify.com/sites/disciplineconnect/deploys)
 
 ## Available Scripts
 
