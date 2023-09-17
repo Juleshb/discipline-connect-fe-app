@@ -2,6 +2,7 @@ import logo from '../../../src/assets/logo.png'
 import React from "react";
 import { Link } from "react-router-dom";
 import { Icon } from '@iconify/react';
+import UserDropdown from "../../Dropdowns/userDropdowns";
 
 
 
@@ -9,11 +10,11 @@ export default function Sidebar() {
   const [collapseShow, setCollapseShow] = React.useState("hidden");
   return (
     <>
-      <nav className=" md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6">
+      <nav className=" md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6">
         <div className="md:flex-col md:items-stretch md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center justify-between w-full mx-auto">
           {/* Toggler */}
           <button
-            className="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
+            className="cursor-pointer text-primary  md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
             type="button"
             onClick={() => setCollapseShow("bg-white m-2 py-3 px-6")}
           >
@@ -24,17 +25,14 @@ export default function Sidebar() {
                 <i className="fas fa-times p-3 cursor-pointer text-secondary opacity-5 absolute top-0 end-0 md:hidden" aria-hidden="true" id="iconSidenav">h</i>
                 <a className="navbar-brand flex m-0" href="index.php">
                   <img src={logo} className="h-10" alt="main_logo" />
-                  <span className="ms-1 text-xs font-bold text-primary "><br></br>Discipline CONNECT</span>
-                </a>
+                  <span className="hidden sm:inline-block ms-1 text-xs font-bold text-primary"> <br /> Discipline CONNECT</span>                
+                  </a>
               </div>
           {/* User */}
           <ul className="md:hidden items-center flex flex-wrap list-none">
-            <li className="inline-block relative">
-              
-            </li>
-            <li className="inline-block relative">
             
-            </li>
+            <UserDropdown />
+            
           </ul>
           {/* Collapse */}
           <div
@@ -55,7 +53,7 @@ export default function Sidebar() {
                 <div className="w-6/12 flex justify-end">
                   <button
                     type="button"
-                    className="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
+                    className="cursor-pointer text-primary  md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
                     onClick={() => setCollapseShow("hidden")}
                   >
                    <Icon icon="ic:outline-close" />
