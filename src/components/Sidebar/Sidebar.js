@@ -10,8 +10,8 @@ export default function Sidebar() {
   const [collapseShow, setCollapseShow] = React.useState("hidden");
   return (
     <>
-      <nav className=" md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6">
-        <div className="md:flex-col md:items-stretch md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center justify-between w-full mx-auto">
+      <nav className=" md:left-0 z-40 sm:fixed fixed sm:w-full md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6">
+        <div className="md:flex-col  md:items-stretch md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center justify-between w-full mx-auto">
           {/* Toggler */}
           <button
             className="cursor-pointer text-primary  md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
@@ -87,20 +87,21 @@ export default function Sidebar() {
                 </Link>
               </li>
 
-              <li className="items-center hover:bg-sky-100 px-4 rounded-lg ">
+              <li className={"items-center hover:bg-sky-100 px-4 rounded-lg " +
+                   (window.location.href.indexOf("/adimin/sutudent") !== -1 
+                     ? "bg-sky-100 rounded-lg"
+                     : "hover:bg-sky-100")
+                     }>
                 <Link
                   className={
-                    "text-xs flex  py-3 block " +
-                    (window.location.href.indexOf("/admin/settings") !== -1
-                      ? "text-lightBlue-500 hover:text-lightBlue-600"
-                      : "hover:text-blueGray-500")
+                    "text-xs flex  py-3 block " 
                   }
-                  to="/admin/settings"
+                  to="/adimin/sutudent"
                 >
                   <i
                     className={
                       "fas fa-tools mr-2 text-sm " +
-                      (window.location.href.indexOf("/admin/settings") !== -1
+                      (window.location.href.indexOf("/adimin/sutudent") !== -1
                         ? "opacity-75"
                         : "text-blueGray-300")
                     }

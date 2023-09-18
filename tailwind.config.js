@@ -8,6 +8,8 @@ module.exports = {
       },
       colors: {
         primary: '#274875',
+        secondary: '#F5F5F5',
+        textcol: '#726E6E'
       },
       animation: {
         slide: "slide 25s linear infinite"
