@@ -1,7 +1,7 @@
 export default function Studentsform() {
     return (
       <>
- <div className="relative flex flex-col bg-white min-w-0 break-words w-full mb-6 shadow-lg rounded-lg  border-0">
+ 
         <div className="rounded-t  mb-0 px-6 py-6">
           <div className="text-center flex justify-between">
             <h4 className="text-lg font-bold text-primary">Basic Information</h4>
@@ -71,11 +71,7 @@ export default function Studentsform() {
               <button type="submit" className="mt-4 px-4 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark focus:outline-none focus:ring focus:ring-primary focus:ring-opacity-50">Save</button>
             </form>
         </div>
-      </div>
-
-      <br></br>
-      <br></br>
-      <br></br>
+     
       
 
 

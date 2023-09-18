@@ -8,7 +8,7 @@ module.exports = {
       },
       colors: {
         primary: '#274875',
-        secondary: '#D9D9D9',
+        secondary: '#F5F5F5',
         textcol: '#726E6E'
       },
       animation: {
