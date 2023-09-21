@@ -2,6 +2,7 @@ import Navbar from "../components/Nav/nav";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Students from "../components/Metron/Students";
 import { Route, Routes, Navigate } from 'react-router-dom';
+import Permissions from "../components/permissions/PermissionIndex";
 
 export default function Admin() {
   return (
@@ -16,6 +17,7 @@ export default function Admin() {
           
           <Routes>
           <Route path="/sutudent" exact ={<Students />} />
+          <Route path="/permissions" exact ={<Permissions />} />
             {/* <Route path="/admin/maps" element={<Maps />} />*/}
             <Route path="*" element={<Navigate to="/adimin" />} />
           </Routes>
