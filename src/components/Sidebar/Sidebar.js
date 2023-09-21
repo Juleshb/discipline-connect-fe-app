@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import logo from '../../../src/assets/logo.png'
 import React from "react";
 import { Link } from "react-router-dom";
@@ -179,12 +180,21 @@ export default function Sidebar() {
                 </Link>
               </li>
             
-              <li className="items-center hover:bg-sky-100 px-4 rounded-lg">
+              <li className={"items-center hover:bg-sky-100 px-4 rounded-lg " +
+                   (window.location.href.indexOf("/adimin/permissions") !== -1 
+                     ? "bg-sky-100 rounded-lg"
+                     : "hover:bg-sky-100")
+                     }>
                 <Link
                   className="hover:text-blueGray-500 text-xs flex  py-3  block"
-                  to="/landing"
+                  to="/admin/permissions"
                 >
-                  <i className="fas fa-newspaper text-blueGray-400 mr-2 text-sm"><Icon icon="octicon:key-24" /></i>{" "}
+                  <i className={"fas fa-newspaper text-blueGray-400 mr-2 text-sm" +
+                  (window.location.href.indexOf("/admin/permissions") !== -1
+                  ? "opacity-75"
+                  : "text-blueGray-300")
+                  }
+                  ><Icon icon="octicon:key-24" /></i>{" "}
                   
                   Permissions
                 </Link>
